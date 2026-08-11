@@ -1,77 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Space Destinations</title>
-  <style>
-    body {
-      font-family: Arial;
-      background-color: lightgray;
-    }
-    nav a {
-      margin: 10px;
-      background-color: darkblue;
-      color: white;
-      padding: 5px;
-      text-decoration: none;
-    }
-    .destination {
-      border: 1px solid black;
-      margin: 15px;
-      padding: 10px;
-      background-color: white;
-    }
-    footer {
-      background-color: darkblue;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+    <title>Space Destinations</title>
+    <link rel="stylesheet" href="csslab.css">
 </head>
+
 <body>
 
-<h1>Our Space Destinations</h1>
+<header>
+    <h1>🌌 Our Space Destinations</h1>
+    <p>Choose your next space adventure.</p>
+</header>
 
 <nav>
-  <a href="index.html">Home</a> |
-  <a href="destinations.html">Destinations</a> |
-  <a href="booking.html">Booking</a>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="gallery.html">Gallery</a>
 </nav>
 
-<hr>
+<main>
 
-<div class="destination">
-  <h2> Moon Hotel</h2>
-  <img src="https://picsum.photos/id/96/200/150" alt="moon" width="200">
-  <p>Stay 3 days in a hotel orbiting the Moon. See Earth from far away. Price: $450,000</p>
-  <a href="booking.html">Book this</a>
-</div>
+    <div class="destination">
 
-<div class="destination">
-  <h2> Mars Camp</h2>
-  <img src="https://picsum.photos/id/119/200/150" alt="mars" width="200">
-  <p>14 days on Mars. Drive a rover and explore. Price: $1,200,000</p>
-  <a href="booking.html">Book this</a>
-</div>
+        <h2>Moon Hotel</h2>
 
-<div class="destination">
-  <h2> Orbit Lounge</h2>
-  <img src="https://picsum.photos/id/20/200/150" alt="orbit" width="200">
-  <p>2 hour flight just to feel weightless. Cheap and fast. Price: $125,000</p>
-  <a href="booking.html">Book this</a>
-</div>
+        <img
+            src="https://picsum.photos/id/96/500/300"
+            alt="Moon destination"
+        >
 
-<!-- extra video about mars -->
-<h3>Watch a Mars video</h3>
-<iframe width="400" height="250" src="https://www.youtube.com/embed/D8pnmwOXhoY?si=test" title="mars video"></iframe>
+        <p>
+            Stay 3 days in a hotel orbiting the Moon.
+            See Earth from far away and experience luxury beyond Earth.
+        </p>
 
-<details>
-  <summary>More info about trips</summary>
-  <p>All flights include training and space suits. Insurance extra.</p>
-</details>
+        <p><strong>Price: $450,000</strong></p>
+
+        <a href="booking.html">Book this trip</a>
+
+    </div>
+
+
+    <div class="destination">
+
+        <h2>Mars Camp</h2>
+
+        <img
+            src="https://picsum.photos/id/119/500/300"
+            alt="Mars destination"
+        >
+
+        <p>
+            Spend 14 days on Mars.
+            Drive a rover and explore the Martian landscape.
+        </p>
+
+        <p><strong>Price: $1,200,000</strong></p>
+
+        <a href="booking.html">Book this trip</a>
+
+    </div>
+
+
+    <div class="destination">
+
+        <h2>Orbit Lounge</h2>
+
+        <img
+            src="https://picsum.photos/id/20/500/300"
+            alt="Orbit destination"
+        >
+
+        <p>
+            Enjoy a 2 hour flight into orbit
+            and experience the feeling of weightlessness.
+        </p>
+
+        <p><strong>Price: $125,000</strong></p>
+
+        <a href="booking.html">Book this trip</a>
+
+    </div>
+
+
+    <h2>Watch a Mars Video</h2>
+
+    <div class="media-row">
+
+        <iframe
+            width="500"
+            height="280"
+            src="https://www.youtube.com/embed/D8pnmwOXhoY"
+            title="Mars video"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <details>
+
+        <summary>More information about trips</summary>
+
+        <p>
+            All flights include training and space suits.
+            Travel insurance is available at an additional cost.
+        </p>
+
+    </details>
+
+</main>
 
 <footer>
-  <p>Space Tourism - student project</p>
+    <p>Space Tourism - Student Project</p>
 </footer>
 
 </body>
