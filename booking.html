@@ -21,21 +21,45 @@
 
 <main>
 
-<form action="#" method="post"
-      onsubmit="alert('Thanks for booking! We will contact you.'); return false;">
+<form id="booking-form" onsubmit="validateBookingForm(event)">
+
+    <!-- Error message -->
+    <p id="form-error"
+       style="display: none; color: red; font-weight: bold;">
+    </p>
+
 
     <fieldset>
 
         <legend>Your Information</legend>
 
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required
+        >
+
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+        >
+
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+        >
 
     </fieldset>
 
@@ -48,13 +72,27 @@
             Choose Destination:
         </label>
 
-        <select id="destination" name="destination">
+        <select
+            id="destination"
+            name="destination"
+            required
+        >
 
-            <option>Moon Hotel ($450k)</option>
+            <option value="">
+                -- Select a destination --
+            </option>
 
-            <option>Mars Camp ($1.2M)</option>
+            <option value="moon">
+                Moon Hotel ($450k)
+            </option>
 
-            <option>Orbit Lounge ($125k)</option>
+            <option value="mars">
+                Mars Camp ($1.2M)
+            </option>
+
+            <option value="orbit">
+                Orbit Lounge ($125k)
+            </option>
 
         </select>
 
@@ -99,6 +137,7 @@
             Zero-G training (+$5k)
         </label>
 
+
         <label class="choice">
             <input
                 type="checkbox"
@@ -107,6 +146,7 @@
             >
             Space suit photo (+$2k)
         </label>
+
 
         <label class="choice">
             <input
@@ -133,6 +173,7 @@
             Economy (shared)
         </label>
 
+
         <label class="choice">
             <input
                 type="radio"
@@ -141,6 +182,7 @@
             >
             Business (private pod)
         </label>
+
 
         <label class="choice">
             <input
@@ -176,6 +218,7 @@
         Submit Booking
     </button>
 
+
     <button type="reset">
         Clear Form
     </button>
@@ -204,6 +247,10 @@
     </p>
 
 </footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
