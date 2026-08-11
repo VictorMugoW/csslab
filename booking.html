@@ -1,112 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Book Space Flight</title>
-  <style>
-    body {
-      font-family: Arial;
-      background-color: lightcyan;
-    }
-    nav a {
-      margin: 10px;
-      background-color: darkblue;
-      color: white;
-      padding: 5px;
-      text-decoration: none;
-    }
-    form {
-      background-color: white;
-      padding: 20px;
-      border: 1px solid black;
-    }
-    input, select, textarea {
-      margin: 5px;
-      padding: 5px;
-      width: 250px;
-    }
-    button {
-      background-color: darkblue;
-      color: white;
-      padding: 8px;
-    }
-    footer {
-      background-color: darkblue;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 30px;
-    }
-  </style>
+    <title>Book Space Flight</title>
+    <link rel="stylesheet" href="csslab.css">
 </head>
+
 <body>
 
-<h1>Book Your Space Trip</h1>
+<header>
+    <h1>🛰️ Book Your Space Trip</h1>
+    <p>Complete the form below to request your space adventure.</p>
+</header>
 
 <nav>
-  <a href="index.html">Home</a> |
-  <a href="destinations.html">Destinations</a> |
-  <a href="booking.html">Booking</a>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="gallery.html">Gallery</a>
 </nav>
 
-<hr>
+<main>
 
-<form action="#" method="post" onsubmit="alert('Thanks for booking! We will contact you.'); return false;">
-  <fieldset>
-    <legend>Your info</legend>
-    <label>Full name:</label><br>
-    <input type="text" name="name" required><br>
+<form action="#" method="post"
+      onsubmit="alert('Thanks for booking! We will contact you.'); return false;">
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br>
+    <fieldset>
 
-    <label>Phone:</label><br>
-    <input type="tel" name="phone"><br>
-  </fieldset>
+        <legend>Your Information</legend>
 
-  <fieldset>
-    <legend>Trip details</legend>
-    <label>Choose destination:</label><br>
-    <select name="destination">
-      <option>Moon Hotel ($450k)</option>
-      <option>Mars Camp ($1.2M)</option>
-      <option>Orbit Lounge ($125k)</option>
-    </select><br>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label>Number of people:</label><br>
-    <input type="number" name="people" min="1" max="6" value="1"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label>Preferred date:</label><br>
-    <input type="date" name="date"><br>
-  </fieldset>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
 
-  <fieldset>
-    <legend>Extras</legend>
-    <input type="checkbox" name="training" value="yes"> Zero-G training (+$5k)<br>
-    <input type="checkbox" name="photo" value="yes"> Space suit photo (+$2k)<br>
-    <input type="checkbox" name="insurance" value="yes"> Travel insurance (+$8k)<br>
-  </fieldset>
+    </fieldset>
 
-  <fieldset>
-    <legend>Class</legend>
-    <input type="radio" name="class" value="economy"> Economy (shared)<br>
-    <input type="radio" name="class" value="business"> Business (private pod)<br>
-    <input type="radio" name="class" value="first"> First class (suite)<br>
-  </fieldset>
 
-  <fieldset>
-    <legend>Special requests</legend>
-    <textarea rows="4" cols="30" placeholder="Any allergies or needs?"></textarea>
-  </fieldset>
+    <fieldset>
 
-  <button type="submit">Submit booking</button>
-  <button type="reset">Clear form</button>
+        <legend>Trip Details</legend>
+
+        <label for="destination">
+            Choose Destination:
+        </label>
+
+        <select id="destination" name="destination">
+
+            <option>Moon Hotel ($450k)</option>
+
+            <option>Mars Camp ($1.2M)</option>
+
+            <option>Orbit Lounge ($125k)</option>
+
+        </select>
+
+
+        <label for="people">
+            Number of People:
+        </label>
+
+        <input
+            type="number"
+            id="people"
+            name="people"
+            min="1"
+            max="6"
+            value="1"
+        >
+
+
+        <label for="date">
+            Preferred Date:
+        </label>
+
+        <input
+            type="date"
+            id="date"
+            name="date"
+        >
+
+    </fieldset>
+
+
+    <fieldset>
+
+        <legend>Extras</legend>
+
+        <label class="choice">
+            <input
+                type="checkbox"
+                name="training"
+                value="yes"
+            >
+            Zero-G training (+$5k)
+        </label>
+
+        <label class="choice">
+            <input
+                type="checkbox"
+                name="photo"
+                value="yes"
+            >
+            Space suit photo (+$2k)
+        </label>
+
+        <label class="choice">
+            <input
+                type="checkbox"
+                name="insurance"
+                value="yes"
+            >
+            Travel insurance (+$8k)
+        </label>
+
+    </fieldset>
+
+
+    <fieldset>
+
+        <legend>Class</legend>
+
+        <label class="choice">
+            <input
+                type="radio"
+                name="class"
+                value="economy"
+            >
+            Economy (shared)
+        </label>
+
+        <label class="choice">
+            <input
+                type="radio"
+                name="class"
+                value="business"
+            >
+            Business (private pod)
+        </label>
+
+        <label class="choice">
+            <input
+                type="radio"
+                name="class"
+                value="first"
+            >
+            First class (suite)
+        </label>
+
+    </fieldset>
+
+
+    <fieldset>
+
+        <legend>Special Requests</legend>
+
+        <label for="requests">
+            Tell us about any special needs:
+        </label>
+
+        <textarea
+            id="requests"
+            name="requests"
+            rows="5"
+            placeholder="Any allergies or needs?"
+        ></textarea>
+
+    </fieldset>
+
+
+    <button type="submit">
+        Submit Booking
+    </button>
+
+    <button type="reset">
+        Clear Form
+    </button>
+
+
+    <p>
+        Estimated price:
+        <output name="price">
+            Will be calculated
+        </output>
+    </p>
+
 </form>
 
-<!-- output example just to show we used output tag -->
-<p>Estimated price: <output name="price">Will be calculated</output></p>
+</main>
+
 
 <footer>
-  <p>We will send a confirmation email within 2 days.</p>
+
+    <p>
+        We will send a confirmation email within 2 days.
+    </p>
+
+    <p>
+        Space Tourism - Student Project
+    </p>
+
 </footer>
 
 </body>
