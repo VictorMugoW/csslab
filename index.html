@@ -9,7 +9,10 @@
 
 <header>
     <h1>🚀 Space Tourism Pioneers</h1>
-    <p>Welcome to my space travel website. You can book a trip to space here.</p>
+
+    <p id="welcome-message">
+        Welcome to my space travel website!
+    </p>
 </header>
 
 <nav>
@@ -23,10 +26,15 @@
 
     <h2>About Space Tourism</h2>
 
-    <p>
+    <p id="home-message">
         Space tourism is when normal people like you and me travel to space.
         It is expensive but cool.
     </p>
+
+    <button onclick="changeHomeMessage()">
+        Discover More
+    </button>
+
 
     <img
         class="hero-image"
@@ -34,9 +42,11 @@
         alt="Space view"
     >
 
+
     <h2>Upcoming Flights</h2>
 
     <div class="table-wrapper">
+
         <table>
 
             <tr>
@@ -64,7 +74,9 @@
             </tr>
 
         </table>
+
     </div>
+
 
     <h3>Readiness Status</h3>
 
@@ -78,7 +90,26 @@
         <progress value="45" max="100">45%</progress>
     </p>
 
+
+    <button onclick="toggleInformation()">
+        Show / Hide Trip Information
+    </button>
+
+    <div id="extra-information" style="display: none;">
+
+        <h3>Important Trip Information</h3>
+
+        <p>
+            All passengers must complete space-flight training before departure.
+            Space suits are provided for all travellers.
+            Travel insurance is recommended for every trip.
+        </p>
+
+    </div>
+
+
     <details>
+
         <summary>Click to see requirements</summary>
 
         <ul>
@@ -86,19 +117,25 @@
             <li>Training for 2 weeks</li>
             <li>Sign a waiver</li>
         </ul>
+
     </details>
+
 
     <h3>Experience Space Before You Go</h3>
 
     <div class="media-row">
 
         <audio controls>
+
             <source
                 src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
                 type="audio/mpeg"
             >
+
             Your browser does not support audio.
+
         </audio>
+
 
         <iframe
             width="350"
@@ -112,10 +149,21 @@
 
 </main>
 
+
 <footer>
-    <p>Contact us: space@example.com</p>
-    <p>&copy; 2026 My Space Project</p>
+
+    <p>
+        Contact us: space@example.com
+    </p>
+
+    <p>
+        &copy; 2026 My Space Project
+    </p>
+
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
